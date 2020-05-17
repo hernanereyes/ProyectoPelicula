@@ -36,7 +36,7 @@
           <div class="col-md-12">
             <h4><strong>Chequea las ultimas pelis subidas</strong></h4>
           </div>
-        @foreach ($peliculas as $pelicula)
+        @foreach ($peliculas2 as $pelicula)
           <div class="col-md-3">
                 <div class="card mb-4 box-shadow">
                   <img class="card-img-top" src="https://i.pinimg.com/236x/77/d7/a7/77d7a7cecf750fb5a23fcab4c69d3f01.jpg" alt="Card image cap">
@@ -57,7 +57,9 @@
                 </div>
               </div>
         @endforeach
-      </div>
+        {{-- GENERA EL PAGINADO --}}
+        {{$peliculas2->links()}}
+        </div>
         </div>
       </div>
     </div>

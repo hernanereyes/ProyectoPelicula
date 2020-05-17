@@ -13,14 +13,12 @@
             <img class="first-slide" src="/img/fondocine.jpg" alt="First slide">
             <div class="container">
               <div class="carousel-caption text-left">
-                <h1> <strong>Bienvenido/Welcome</strong></h1>
-                <p>Ponte comodo para disfrutar del mejor Cine</p>
-
-              </div>
+                <h1><h1><strong>Bienvenido/Welcome</strong></h1></h1>
+                </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="second-slide" src="/img/directordecine.jpg" alt="Second slide">
+            <img class="second-slide" src="/img/claqueta.jpg" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
                 <h5></h5>
@@ -28,7 +26,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="third-slide" src="/img/cineonline.jpg" alt="Third slide">
+            <img class="third-slide" src="/img/disney.jpg" alt="Third slide">
             <div class="container">
               <div class="carousel-caption">
                 <h1></h1>

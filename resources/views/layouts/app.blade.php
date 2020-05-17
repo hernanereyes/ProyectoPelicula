@@ -29,29 +29,6 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-{{-- <body>
-    <div id="app">
-      <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Cine Online</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExample02">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-md-0">
-          <input class="form-control" type="text" placeholder="Search">
-        </form>
-      </div>
-    </nav> --}}
-
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -64,6 +41,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                    <!--Links  -->
+
+                    <a class="nav-link" href="\home"> <strong>SUGERIDAS</strong> </a>
+                    <a class="nav-link" href="\home"> <strong>LISTADO DE PELICULAS</strong> </a>
+                    <a class="nav-link" href="\home"> <strong>PELICULAS POR GENERO</strong> </a>
 
                     </ul>
 
@@ -119,7 +101,7 @@
                 <div class=" col-sm-6 col-md-3">
                   <div>
                     <ul class="list-unstyled">
-                      <strong>Redes Sociales</strong>
+                      <strong>Encontranos</strong>
                       <li><i class="fab fa-facebook-square"></i><a href="http://www.facebook.com"> Facebook</a></li>
                       <li><i class="fab fa-twitter-square"></i><a href="http://www.twitter.com"> Twitter</a></li>
                       <li><i class="fab fa-instagram-square"></i><a href="http://www.instegram.com"> Instegram</a></li>
@@ -138,15 +120,10 @@
                       </ul>
                   </div>
                 </div>
-                <div class="col-sm-6 col-md-3">
-                  <ul class="list-unstyled">
-                  <strong>Info</strong>
-                  <p align="justify"><h6>
-                 Version Demo
-                  </h6></p>
-                  </ul>
                 </div>
-              </div>
           </div>
         </body>
+                <footer class="container">
+                <p class="float-right"><a href="#">Volver arriba</a></p>
+                </footer>
         </html>
