@@ -7,26 +7,19 @@
         <div class="row">
           <div class="row">
             <div class="col-md-12">
-              <h4><strong>Ultimas Pelis subidas</strong></h4>
+              <h4><strong>Peliculas Aleatorias</strong></h4>
             </div>
           @foreach ($peliculas as $pelicula)
             <div class="col-md-3">
                   <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" src="https://i.pinimg.com/236x/4e/27/8d/4e278d8db6710b3735140c5dcf4f3f71.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="https://i.pinimg.com/564x/23/27/43/23274376a41c3d6e8966e50c971e7c61.jpg" alt="Card image cap">
                     <div class="card-body">
                       <p class="card-text">
-                        <h3>{{$pelicula->title}}</h3>
-                        <h3>{{$pelicula->genere}}</h3>
-                        <h3>{{$pelicula->rating}}</h3>
+                        <h3 class="card title">{{$pelicula->title}}</h3>
+                        <p class ="card-title">Rating {{$pelicula->rating}}</p>
+                        <a href="detallepeliculas/{{$pelicula->id}}"class="btn btn-primary">Ver Detalles</a>
                       </p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Sinopsis</button>
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Actores</button>
-                        </div>
-                        <small class="text-muted"> </small>
                       </div>
-                    </div>
                   </div>
                 </div>
           @endforeach
@@ -34,36 +27,26 @@
 
         <div class="row">
           <div class="col-md-12">
-            <h4><strong>Chequea las ultimas pelis subidas</strong></h4>
+            <h4><strong>Ultimas Peliculas</strong></h4>
           </div>
-        @foreach ($peliculas2 as $pelicula)
+        @foreach ($ultimas as $ultima)
           <div class="col-md-3">
                 <div class="card mb-4 box-shadow">
-                  <img class="card-img-top" src="https://i.pinimg.com/236x/77/d7/a7/77d7a7cecf750fb5a23fcab4c69d3f01.jpg" alt="Card image cap">
+                  <img class="card-img-top" src="https://i.pinimg.com/564x/23/27/43/23274376a41c3d6e8966e50c971e7c61.jpg" alt="Card image cap">
                   <div class="card-body">
                     <p class="card-text">
-                      <h3>{{$pelicula->title}}</h3>
-                      <h3>{{$pelicula->genere}}</h3>
-                      <h3>{{$pelicula->rating}}</h3>
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Sinopsis</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Actores</button>
-                      </div>
-                      <small class="text-muted">  ** NUEVO **</small>
-                    </div>
+                      <h3 class="card title">{{$ultima->title}}</h3>
+                      <p class ="card-title">Rating {{$ultima->rating}}</p>
+                      <a href="detallepeliculas/{{$ultima->id}}"class="btn btn-primary">Ver Detalles</a>
+                      </p>
                   </div>
                 </div>
               </div>
-        @endforeach
-        {{-- GENERA EL PAGINADO --}}
-        {{$peliculas2->links()}}
-        </div>
+            @endforeach
+          </div>
         </div>
       </div>
     </div>
   </main>
-
 
 @endsection

@@ -29,6 +29,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+<body>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -40,15 +41,16 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                    <!--Links  -->
+                    @if (Auth::user()!= NULL)
+                      <ul class="navbar-nav mr-auto">
+                      <!--Links  -->
 
-                    <a class="nav-link" href="\home"> <strong>SUGERIDAS</strong> </a>
-                    <a class="nav-link" href="\home"> <strong>LISTADO DE PELICULAS</strong> </a>
-                    <a class="nav-link" href="\home"> <strong>PELICULAS POR GENERO</strong> </a>
+                      <a class="nav-link" href="\home"> <strong>SUGERIDAS</strong> </a>
+                      <a class="nav-link" href="\listadopeliculas"> <strong>LISTADO DE PELICULAS</strong> </a>
+                      {{-- <a class="nav-link" href="\home"> <strong>PELICULAS POR GENERO</strong> </a> --}}
 
-                    </ul>
-
+                      </ul>
+                    @endif
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -84,9 +86,11 @@
                 </div>
             </div>
         </nav>
-
         <main class="py-4">
+          <section class="container mt-3 pt-2">
             @yield('content')
+          </section>
+        </main>
             <div class="container-fluid">
             <div class="row">
                 <div class=" col-sm-6 col-md-3">
@@ -122,8 +126,8 @@
                 </div>
                 </div>
           </div>
-        </body>
                 <footer class="container">
                 <p class="float-right"><a href="#">Volver arriba</a></p>
                 </footer>
+          </body>
         </html>

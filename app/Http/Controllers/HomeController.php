@@ -24,9 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $peliculas=Pelicula::all()->random(5);//muestra 5 peliculas al azar
-        $peliculas2=Pelicula::paginate(5);
+      $peliculas = Pelicula::all()->random(5);
+      $ultimas = Pelicula::all()->sortByDesc("created_at")->take(5);
+      return view('home',['peliculas'=>$peliculas,'ultimas'=>$ultimas]);
 
-        return view('home', compact('peliculas','peliculas2'));
+
     }
 }
