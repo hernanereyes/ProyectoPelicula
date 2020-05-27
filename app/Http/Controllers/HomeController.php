@@ -30,4 +30,12 @@ class HomeController extends Controller
 
 
     }
+
+    public function admin(){
+      $peliculas = Pelicula::all();
+
+      return view('admin',compact('peliculas'));
+
+
+    }
 }

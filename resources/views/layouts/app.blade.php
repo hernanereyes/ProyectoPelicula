@@ -81,6 +81,9 @@
                                     </form>
                                 </div>
                             </li>
+                          @if (Auth::user()!= null && (Auth::user()->role == "1"))
+                          <li style="margin:8px;"><a href="{{url('/admin')}}"><i class="fas fa-biking"></i>ADMIN</a></li>
+                          @endif
                         @endguest
                     </ul>
                 </div>

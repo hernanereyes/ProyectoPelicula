@@ -27,7 +27,7 @@ Route::get('/detallepeliculas/{id}', 'PeliculasController@show')->name("detallep
 
 //BUSCAR PELICULAS
 
-Route::get('/buscarpeliculas', 'PeliculasController@buscar');
+Route::get('/buscar', 'PeliculasController@buscar');
 
 
 //AGREGAR PELICULAS
@@ -36,9 +36,12 @@ Route::get('/agregarpeliculas','PeliculasController@agregar');
 
 Route::post('/agregarpeliculas','PeliculasController@guardar');
 
-//
+//ADMIN
 
-Route::post('/borrarpeliculas','PeliculasController@borrar');
+Route::get('/admin','HomeController@admin');
+
+
+Route::get('/borrarpelicula/{id}','PeliculasController@borrar');
 
 Route::post('/actores','ActoresControllerl@crear'); //Alta
 

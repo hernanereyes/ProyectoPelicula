@@ -33,14 +33,10 @@ class PeliculasController extends Controller
 
       public function buscar(Request $request){
 
-        $peliculas = $request->input('peliculas');
-        $peliculas = Pelicula::where('title', 'LIKE', "%(peliculas)%")->paginate(3);
+        $peliculas = Pelicula::where('title', 'LIKE', "%{$request->input('peliculas')}%")->paginate(3);
         return view('listadoPeliculas',['pelicula'->$peliculas]);
 
       }
-
-
-
 
       public function guardar(Request $formulario){
         $newPelicula = new Pelicula();
@@ -49,6 +45,7 @@ class PeliculasController extends Controller
         $newPelicula->awards = $formulario["awards"];
         $newPelicula->release_date = $formulario["release_date"];
         $newPelicula->save();
+        return redirect("listadopeliculas");
       }
 
       public function borrar(Request $formulario){
@@ -58,7 +55,7 @@ class PeliculasController extends Controller
 
         $peliculas->delete();
 
-        return view("borrarpeliculas",['peliculas'=>$peliculas]);
+        return redirect("listadopeliculas");
 
       }
 }

@@ -1,26 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-   <nav class="navbar navbar-expand navbar-dark bg-dark">
-        {{-- <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button> --}}
+      <div class="container-fluid">
+        <div class="row justify-content-md-center">
+          <div class="col-md-6">
+            <form method="get" action = "buscar">
 
-        <div class="collapse navbar-collapse" id="navbarsExample02">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"><span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"></a>
-            </li>
-          </ul> --}}
-          <form class="form-inline my-2 my-md-0">
-            <input class="form-control" type="text" placeholder="Search">
-          </form>
+              <div class="input-group">
+                <input type="text" name="peliculas" class="form-control" placeholder="Buscar peliculas">
+                <div class="input-group-append">
+                  <button class="btn btn-secondary"type="submit">
+                    Buscar
+                  </button>
+                </div>
+              </div>
+           </form>
+          </div>
         </div>
-      </nav>
+      </div>
 
   <div class="row">
     <div class="col-md-12">
@@ -35,14 +32,6 @@
 
                 <h3 class = "card title">{{($pelicula->title)}} </h3>
                 <a href="detallepeliculas/{{$pelicula->id}}"class="btn btn-primary">Ver Detalles</a>
-                {{-- <form method="post" action="/detallepeliculas" enctype="multipart/form-data">
-                  @csrf
-                  @method("GET")
-                  <div class="form-group">
-                    <input type="hidden" name="id" value="{{$pelicula->id}}">
-                    <input type="submit" name="" value="Ver Detalle">
-                  </div>
-                </form> --}}
                 </p>
               <div class="d-flex justify-content-between align-items-center">
                 </div>
