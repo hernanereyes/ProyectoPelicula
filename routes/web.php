@@ -32,19 +32,26 @@ Route::get('/buscar', 'PeliculasController@buscar');
 
 //AGREGAR PELICULAS
 
-Route::get('/agregarpeliculas','PeliculasController@agregar');
+Route::get('/agregarpeliculas','PeliculasController@agregar')->middleware('llave');
 
-Route::post('/agregarpeliculas','PeliculasController@guardar');
+Route::post('/agregarpeliculas','PeliculasController@guardar')->middleware('llave');
+
+//MODIFICACION PELICULAS
+
+Route::get('/editarpelicula/{id}','PeliculasController@editar')->middleware('llave');
+
+Route::put('/actualizarPelicula/{id}','PeliculasController@update')->middleware('llave');
 
 //ADMIN
 
-Route::get('/admin','HomeController@admin');
+Route::get('/admin','HomeController@admin')->middleware('llave');
 
+//BORRAR PELICULA
 
-Route::get('/borrarpelicula/{id}','PeliculasController@borrar');
+Route::get('/borrarpelicula/{id}','PeliculasController@borrar')->middleware('llave');
 
-Route::post('/actores','ActoresControllerl@crear'); //Alta
-
-Route::patch('/peliculas{id}', 'PeliculasController@editar'); //Modificacion
-
-Route::delete('/actores{id}', 'ActorController@eliminar'); //Baja
+// // Route::post('/actores','ActoresControllerl@crear'); //Alta
+// //
+// // Route::patch('/peliculas{id}', 'PeliculasController@editar'); //Modificacion
+//
+// Route::delete('/actores{id}', 'ActorController@eliminar'); //Baja

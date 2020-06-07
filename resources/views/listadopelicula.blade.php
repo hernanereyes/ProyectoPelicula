@@ -4,10 +4,10 @@
       <div class="container-fluid">
         <div class="row justify-content-md-center">
           <div class="col-md-6">
-            <form method="get" action = "buscar">
+            <form action ="\buscar"method="get" >
 
               <div class="input-group">
-                <input type="text" name="peliculas" class="form-control" placeholder="Buscar peliculas">
+                <input type="text" name="title" class="form-control" placeholder="Buscar peliculas">
                 <div class="input-group-append">
                   <button class="btn btn-secondary"type="submit">
                     Buscar
