@@ -83,6 +83,11 @@ class PeliculasController extends Controller
         return redirect("listadoPelicula");
     }
 
+    public function listadoAPI(){
+      $peliculas = Pelicula::all();
 
+      return json_encode($peliculas);
+
+    }
 
 }
