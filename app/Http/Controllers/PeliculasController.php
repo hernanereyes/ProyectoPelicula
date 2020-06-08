@@ -48,7 +48,7 @@ class PeliculasController extends Controller
         $newPelicula->awards = $formulario["awards"];
         $newPelicula->release_date = $formulario["release_date"];
         $newPelicula->save();
-        return redirect("listadoPelicula");
+        return redirect("/listadopeliculas");
       }
 
       public function borrar(Request $formulario){
@@ -58,7 +58,7 @@ class PeliculasController extends Controller
 
         $peliculas->delete();
 
-        return redirect("listadoPelicula");
+        return redirect("/listadopeliculas");
 
       }
 
@@ -80,7 +80,7 @@ class PeliculasController extends Controller
         $peliculaNueva->length = $request ["length"];
         $peliculaNueva->genre_id = $request ["genre"];
         $peliculaNueva->save();
-        return redirect("listadoPelicula");
+        return redirect("/listadopeliculas");
     }
 
     public function listadoAPI(){
