@@ -24,6 +24,15 @@
         </li>
         </ul>
         </div>
-  {{-- </div> --}}
+
 </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      </div>
+    <div class="col-md-6">
+      <a href="/listadopeliculas" class="btn btn-lg btn-warning float-left">Volver</a>
+    </div>
+
+  </div>
+
 @endsection

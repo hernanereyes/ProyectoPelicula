@@ -19,8 +19,7 @@
                            </div>
                         </div>
                         <div class="card-body" >
-                           <h6 class="heading-small text-muted mb-4">Datos personales</h6>
-                           <div class="pl-lg-4">
+                            <div class="pl-lg-4">
                               <div class="row">
                                  <div class="col-lg-6">
                                     <strong>Titulo: </strong><br>
@@ -66,8 +65,7 @@
                </div>
                <div>
                  <div class="form-group">
-                   {{-- <input type="submit" name="" class="btn btn-lg btn-danger float-right" value="agregarPelicula"> --}}
-                    <button type="submit" class="btn btn-lg btn-danger float-right">Actualizar</button>
+                   <button type="submit" class="btn btn-lg btn-danger float-right">Actualizar</button>
                  </div>
                   <a href="/listadopeliculas" class="btn btn-lg btn-warning float-left">Volver</a>
                </div>

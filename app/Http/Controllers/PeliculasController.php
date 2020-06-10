@@ -42,13 +42,25 @@ class PeliculasController extends Controller
       }
 
       public function guardar(Request $formulario){
+
+        $formulario->validate([
+              'title' => 'required',
+              'rating' => 'required',
+              'awards' => 'required',
+              'release_date' => 'required',
+              'length' => 'required',
+              ]);
+
         $newPelicula = new Pelicula();
         $newPelicula->title = $formulario["title"];
         $newPelicula->rating = $formulario["rating"];
         $newPelicula->awards = $formulario["awards"];
         $newPelicula->release_date = $formulario["release_date"];
+        $newPelicula->length = $formulario ["length"];
         $newPelicula->save();
         return redirect("/listadopeliculas");
+
+
       }
 
       public function borrar(Request $formulario){
@@ -72,6 +84,14 @@ class PeliculasController extends Controller
 
       public function update(Request $request, $id)
     {
+      $request->validate([
+            'title' => 'required',
+            'rating' => 'required',
+            'awards' => 'required',
+            'release_date' => 'required',
+            'length' => 'required',
+            'genre_id' => 'required',
+            ]);
         $peliculaNueva = Pelicula::findOrFail($id);
         $peliculaNueva->title = $request["title"];
         $peliculaNueva->rating = $request["rating"];
