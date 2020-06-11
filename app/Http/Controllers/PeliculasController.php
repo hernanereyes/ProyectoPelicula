@@ -14,7 +14,6 @@ use App\Actor;
 class PeliculasController extends Controller
 {
         public function listar(){
-        // $peliculas = Pelicula::all();
         $peliculas = Pelicula::paginate(5);
         return view('listadoPelicula',['peliculas'=>$peliculas]);
 

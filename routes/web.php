@@ -19,11 +19,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/listadopeliculas', 'PeliculasController@listar');// Consulta(lista)
+//LISTADO DE PELICULAS
+
+Route::get('/listadopeliculas', 'PeliculasController@listar');
 
 //DETALLE DE PELICULAS
 
-Route::get('/detallepeliculas/{id}', 'PeliculasController@show')->name("detallepeliculas"); //Consulta(detalle)
+Route::get('/detallepeliculas/{id}', 'PeliculasController@show')->name("detallepeliculas");
 
 //BUSCAR PELICULAS
 
@@ -49,9 +51,3 @@ Route::get('/admin','HomeController@admin')->middleware('llave');
 //BORRAR PELICULA
 
 Route::get('/borrarpelicula/{id}','PeliculasController@borrar')->middleware('llave');
-
-// // Route::post('/actores','ActoresControllerl@crear'); //Alta
-// //
-// // Route::patch('/peliculas{id}', 'PeliculasController@editar'); //Modificacion
-//
-// Route::delete('/actores{id}', 'ActorController@eliminar'); //Baja
